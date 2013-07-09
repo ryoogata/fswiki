@@ -1,0 +1,8 @@
+default["fswiki"]["_MAIN_DIRECTORY"] = "/var/www/cgi-bin/wiki"
+default["fswiki"]["_BACKUP_DIRECTORY"] = "/opt/wiki"
+default["fswiki"]["_S3_BUCKETS_NAME"] = "ogata_buckets/fswikibackup"
+default["fswiki"]["_BACKUPED_FILE_PREFIX"] = "fswikiSample"
+default["fswiki"]["_RESTORE"] = "NO"
+default["fswiki"]["_FQDN"] = ""
+default["fswiki"]["_ALIASES"] = ""
+default["fswiki"]["_WEB_DIR"] = ""
