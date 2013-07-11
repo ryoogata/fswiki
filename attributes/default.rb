@@ -1,3 +1,5 @@
+default["apache"]["_DOCROOT"] = "/var/www/html"
+default["apache"]["_CGI_BIN"] = "/var/www/cgi-bin"
 default["fswiki"]["_MAIN_DIRECTORY"] = "/var/www/cgi-bin/wiki"
 default["fswiki"]["_BACKUP_DIRECTORY"] = "/opt/wiki"
 default["fswiki"]["_S3_BUCKETS_NAME"] = "ogata_buckets/fswikibackup"
