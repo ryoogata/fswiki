@@ -44,7 +44,7 @@ end
 directory "#{node[:fswiki][:_MAIN_DIRECTORY]}" do
 	owner "apache"
 	group "apache"
-	mode 00644
+	mode 00755
 	recursive true
 	action :create
 end
@@ -67,7 +67,7 @@ end
 	directory "#{node[:fswiki][:_BACKUP_DIRECTORY]}/#{backup_dir}" do
 		owner "apache"
 		group "apache"
-		mode 00644
+		mode 00755
 		recursive true
 		action :create
 	end
