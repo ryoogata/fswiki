@@ -7,9 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "apache2"
-include_recipe "apache2::mod_cgi"
-
 # fswiki インストールの事前準備
 %w{
 	perl-CGI unzip
@@ -171,3 +168,5 @@ template "/etc/httpd/sites-enabled/fswiki" do
         )
         notifies :restart, "service[httpd]", :immediately
 end
+
+service "httpd"
