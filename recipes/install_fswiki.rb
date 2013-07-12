@@ -7,8 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "fswiki::web"
-
 # fswiki インストールの事前準備
 %w{
 	perl-CGI unzip
@@ -153,4 +151,16 @@ end
 		recursive true
 		action :delete
 	end
+end
+
+
+# fswiki 用の apache の設定を追加
+template "/etc/httpd/sites-enabled/fswiki" do
+        source "fswiki.erb"
+        owner "root"
+        group "root"
+        mode 0644
+                :documentroot => node["apache"]["_DOCROOT"],
+                :cgi_bin => node["apache"]["_CGI_BIN"]
+        )
 end
