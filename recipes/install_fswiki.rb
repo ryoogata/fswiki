@@ -58,7 +58,7 @@ end
 }.each do |default_dir|
 	execute "move-directories" do
 		command "mv /tmp/wiki3_6_4/#{default_dir} #{node[:fswiki][:_MAIN_DIRECTORY]}"
-                creates "#{node[:fswiki][:_MAIN_DIRECTORY]}"
+                creates "#{node[:fswiki][:_MAIN_DIRECTORY]}/#{default_dir}"
 	end
 end
 
