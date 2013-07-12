@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "recipe[apache2]"
+include_recipe "recipe[apache2::mod_cgi]"
+
 # fswiki インストールの事前準備
 %w{
 	perl-CGI unzip
