@@ -166,4 +166,5 @@ template "/etc/httpd/sites-enabled/fswiki" do
                 :documentroot => node["apache"]["_DOCROOT"],
                 :cgi_bin => node["apache"]["_CGI_BIN"]
         )
+        notifies :restart, "service[httpd]", :immediately
 end
