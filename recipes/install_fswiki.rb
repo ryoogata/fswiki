@@ -35,6 +35,7 @@ script "unzip" do
        code <<-EOH
                unzip wiki3_6_4.zip
        EOH
+       creates "/tmp/wiki3_6_4"
 end
 
 
@@ -54,6 +55,7 @@ end
 }.each do |default_dir|
 	execute "move-directories" do
 		command "mv /tmp/wiki3_6_4/#{default_dir} #{node[:fswiki][:_MAIN_DIRECTORY]}"
+                creates "#{node[:fswiki][:_MAIN_DIRECTORY]}"
 	end
 end
 
