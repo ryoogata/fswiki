@@ -160,6 +160,7 @@ template "/etc/httpd/sites-enabled/fswiki" do
         owner "root"
         group "root"
         mode 0644
+        variables(
                 :documentroot => node["apache"]["_DOCROOT"],
                 :cgi_bin => node["apache"]["_CGI_BIN"]
         )
