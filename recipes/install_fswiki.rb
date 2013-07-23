@@ -93,7 +93,7 @@ end
 %w{
 	config data
 }.each do |directory|
-	execute "move-directories" do
+	execute "move_directories" do
 		command "mv /tmp/wiki3_6_4/#{directory}/* #{node[:fswiki][:_MAIN_DIRECTORY]}/#{directory}"
 	end
 end
