@@ -82,6 +82,8 @@ end
 	attach backup log pdf config data
 }.each do |link_dir|
 	link "#{node[:fswiki][:_MAIN_DIRECTORY]}/#{link_dir}" do
+		owner "apache"
+		group "apache"
 		to "#{node[:fswiki][:_BACKUP_DIRECTORY]}/#{link_dir}"
 	end
 end
