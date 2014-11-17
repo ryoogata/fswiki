@@ -159,7 +159,7 @@ end
 
 
 # fswiki 用の apache の設定を追加
-template "/etc/httpd/sites-enabled/fswiki" do
+template "/etc/httpd/sites-enabled/fswiki.conf" do
         source "fswiki.erb"
         owner "root"
         group "root"
